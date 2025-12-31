@@ -1,0 +1,186 @@
+/* ===== Navbar ===== */
+.navbar {
+    width: 100%;
+    background: linear-gradient(135deg, #43a047, #66bb6a);
+    padding: 14px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* ===== Logo / Brand ===== */
+.navbar .logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+/* ===== Nav Links ===== */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li a {
+    color: #f1f8e9;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* ===== Hover Effect ===== */
+.navbar ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+/* ===== Active Link ===== */
+.navbar ul li a.active {
+    background: #ffffff;
+    color: #2e7d32;
+    font-weight: 600;
+}
+
+/* ===== Mobile Menu Button ===== */
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .navbar ul {
+        position: absolute;
+        top: 65px;
+        right: 20px;
+        background: linear-gradient(135deg, #43a047, #66bb6a);
+        flex-direction: column;
+        width: 200px;
+        border-radius: 12px;
+        padding: 15px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+        display: none;
+    }
+
+    .navbar ul.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+
+
+/* ===== Dropdown Container ===== */
+.dropdown {
+    position: relative;
+}
+
+/* ===== Dropdown Button / Link ===== */
+.dropdown>a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* ===== Dropdown Menu ===== */
+.dropdown-menu {
+    position: absolute;
+    top: 120%;
+    left: 0;
+    min-width: 180px;
+    background: linear-gradient(135deg, #43a047, #66bb6a);
+    border-radius: 12px;
+    padding: 10px 0;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+/* ===== Dropdown Links ===== */
+.dropdown-menu a {
+    display: block;
+    padding: 10px 18px;
+    color: #f1f8e9;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: background 0.3s, padding-left 0.3s;
+}
+
+/* ===== Hover Effect ===== */
+.dropdown-menu a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    padding-left: 24px;
+    color: #ffffff;
+}
+
+/* ===== Show Dropdown on Hover ===== */
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* ===== Dropdown Arrow (Optional) ===== */
+.dropdown-menu::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 20px;
+    width: 16px;
+    height: 16px;
+    background: linear-gradient(135deg, #43a047, #66bb6a);
+    transform: rotate(45deg);
+}
+/* ===== Add Button ===== */
+.btn-add {
+  background: linear-gradient(135deg, #43a047, #66bb6a);
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 8px 20px rgba(67, 160, 71, 0.4);
+  transition: all 0.3s ease;
+  border: none;
+}
+
+/* ===== Hover Effect ===== */
+.btn-add:hover {
+  background: linear-gradient(135deg, #2e7d32, #43a047);
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 12px 28px rgba(46, 125, 50, 0.5);
+  color: #ffffff;
+}
+
+/* ===== Active (Click) ===== */
+.btn-add:active {
+  transform: translateY(0) scale(1);
+  box-shadow: 0 6px 14px rgba(46, 125, 50, 0.4);
+}
+
+
